@@ -10,6 +10,24 @@ The client will be handed an ipad with the app open upon entering Vokal.
 The client can view Vokal’s past/current projects at any time.
 Vokal employees will each have a keychain beacon. During the tour the iPad will show all nearby Vokal employees and the current project they are associated with. They can then tap the individual to view more information.
 
+#### API Table of Contents
+
+1. [Admin Login](#admin-login)
+2. [Add an employee](#add-an-employee)
+3. [Get a list of employees](#get-a-list-of-employees)
+4. [Get an employee](#get-an-employee)
+5. [Update an employee](#update-an-employee)
+6. [Delete an employee](#delete-an-employee)
+7. [Add a project](#add-a-project)
+8. [Get a list of projects](#get-a-list-of-projects)
+9. [Get a project](#get-a-project)
+10. [Update a project](#update-a-project)
+11. [Delete a project](#delete-a-project)
+12. [Add a beacon](#add-a-beacon)
+13. [Get a list of beacons](#get-a-list-of-beacons)
+14. [Get a beacon](#get-a-beacon)
+15. [Update a beacon](#update-a-beacon)
+16. [Delete a beacon](#delete-a-beacon)
 
 ## API Routes
 
@@ -449,7 +467,7 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 * `409` if beacon already exists  
 
 
-### Get the list of beacons
+### Get a list of beacons
 
 **GET:**
 ```
