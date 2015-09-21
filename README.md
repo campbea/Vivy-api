@@ -456,61 +456,14 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 /v1/beacon
 ```
 
-**Response:**
-```json
-{
-    "count": 10,
-    "previous": null,
-    "next": "",
-    "results": [
-        {
-            "id": 1,
-            "beacon_id": "1234567890",
-            "employee": {
-              "id": 1,
-              "first_name": "Paul",
-              "last_name": "George",
-              "title": "CEO",
-              "email": "paul.george@vokal.io",
-              "image_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
-              "summary": "He was selected by the Pacers with the 10th overall pick of the 2010 NBA draft. In 2013, he was selected to play in his first NBA All-Star Game, received the NBA Most Improved Player Award, and was named to the All-NBA Third Team and the All-Defensive Second Team",
-              "extra_info": {
-                  "What drives you?": "basketball",
-                  "Who inspires you? ": "basketball",
-                  "What’s something surprising about you?": "basketball",
-                  "What would you do if you won the lottery?": "basketball"
-              },
-              "project": 1,
-              "added_at": "2015-06-01T19:22:24.850544Z",
-              "updated": "2015-06-01T19:22:24.850544Z"
-          },
-          "added_at": "2015-06-01T19:22:24.850544Z",
-          "updated": "2015-06-01T19:22:24.850544Z"
-        },
-    ]
-}
-```
-
-**Status Codes:**
-* `200` if successful
-
-
-### Get nearby beacons
-
-**GET:**
-```
-/v1/beacon/nearby
-```
-
 **Notes**
 One needs to send detected beacon ids as parameters
-Just hitting the route /v1/beacon/nearby will not return anything
+Just hitting the route /v1/beacon will return all beacon instances
 
 **Query Parameters:**
-Beacon records are returned in the order given
-(/v1/beacon/nearby?beacon_id=1234567890&beacon_id=999999999)
-
-* `id` - An integer: the beacon's id
+Beacon records are returned in the same order passed.
+Beacon ids are passed by using the following format:
+(/v1/beacon/?beacon_id[]=1234567890&beacon_id[]=999999999)
 
 **Response:**
 ```json
@@ -549,6 +502,7 @@ Beacon records are returned in the order given
 
 **Status Codes:**
 * `200` if successful
+
 
 ### Get a beacon
 
