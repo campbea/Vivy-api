@@ -13,6 +13,38 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 
 ## API Routes
 
+
+### Admin login
+
+**POST:**
+```
+/v1/admin/login
+```
+
+**Body:**
+```json
+{
+    "email": "johndoe@vokalinteractive.com",
+    "password": "12345678"
+}
+```
+
+**Response:**
+```json
+{
+    "id": 1,
+    "email": "johndoe@vokalinteractive.com",
+    "name": "John Doe",
+    "auth_token": "UYGgYtg76GUIHIUHiuhIUhi7y8d120dkasd0mnjv",
+    "is_admin": false
+}
+```
+
+**Status Codes:**
+* `201` if successful
+* `400` if incorrect data provided
+
+
 ### Add an employee
 
 **POST:**
@@ -64,7 +96,7 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 **Status Codes:**
 * `201` if successful
 * `400` if incorrect data provided
-* `401` if invalid credentials
+* `401` if not admin
 * `409` if employee already exists  
 
 
@@ -105,7 +137,6 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 
 **Status Codes:**
 * `200` if successful
-* `401` if invalid credentials
 
 
 ### Get an employee
@@ -138,7 +169,6 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 
 **Status Codes:**
 * `200` if successful
-* `401` if invalid credentials
 * `404` if employee does not exist
 
 
@@ -181,7 +211,7 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 **Status Codes:**
 * `200` if successful
 * `400` if data is not provided
-* `401` if invalid credentials
+* `401` if not admin
 * `404` if employee does not exist
 
 
@@ -196,7 +226,7 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 
 **Status Codes:**
 * `204` if successful
-* `401` if invalid credentials
+* `401` if not admin
 * `404` if employee does not exist
 
 
@@ -210,9 +240,15 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 **Body:**
 ```json
 {
-    "name": "Mira",
+    "name": "Parche",
+    "headline": "Eliminating the valet wait",
+    "problem": "The traditional valet model doesn’t support the needs of the modern, cashless customer or offer an opportunity for reporting and analytics.",
+    "solution": "Parche partnered with Vokal for an uncommon logistical solution using a common tool, the smartphone, giving greater power and convenience to valet customers. The Parche app processes requests and payment with a single command, allowing customers to go from table to car without waiting outside or stopping for cash. Valet operators also gain the ability to monitor valet activity and eliminate the common causes of customer complaints, leaving better impressions and building repeat patronage.",
     "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
-    "description": "A fitness tracker for women",
+    "screenshot1": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot2": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot3": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot4": "http://www.vokal.io/sites/default/files/screenshot.png"
 }
 ```
 
@@ -220,9 +256,15 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 ```json
 {
     "id": 1,
-    "name": "Mira",
+    "name": "Parche",
+    "headline": "Eliminating the valet wait",
+    "problem": "The traditional valet model doesn’t support the needs of the modern, cashless customer or offer an opportunity for reporting and analytics.",
+    "solution": "Parche partnered with Vokal for an uncommon logistical solution using a common tool, the smartphone, giving greater power and convenience to valet customers. The Parche app processes requests and payment with a single command, allowing customers to go from table to car without waiting outside or stopping for cash. Valet operators also gain the ability to monitor valet activity and eliminate the common causes of customer complaints, leaving better impressions and building repeat patronage.",
     "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
-    "description": "A fitness tracker for women",
+    "screenshot1": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot2": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot3": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot4": "http://www.vokal.io/sites/default/files/screenshot.png",
     "added_at": "2015-06-01T19:22:24.850544Z",
     "updated": "2015-06-01T19:22:24.850544Z"
 }
@@ -231,7 +273,7 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 **Status Codes:**
 * `201` if successful
 * `400` if incorrect data provided
-* `401` if invalid credentials
+* `401` if not admin
 * `409` if project already exists  
 
 
@@ -251,9 +293,15 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
     "results": [
         {
           "id": 1,
-          "name": "Mira",
+          "name": "Parche",
+          "headline": "Eliminating the valet wait",
+          "problem": "The traditional valet model doesn’t support the needs of the modern, cashless customer or offer an opportunity for reporting and analytics.",
+          "solution": "Parche partnered with Vokal for an uncommon logistical solution using a common tool, the smartphone, giving greater power and convenience to valet customers. The Parche app processes requests and payment with a single command, allowing customers to go from table to car without waiting outside or stopping for cash. Valet operators also gain the ability to monitor valet activity and eliminate the common causes of customer complaints, leaving better impressions and building repeat patronage.",
           "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
-          "description": "A fitness tracker for women",
+          "screenshot1": "http://www.vokal.io/sites/default/files/screenshot.png",
+          "screenshot2": "http://www.vokal.io/sites/default/files/screenshot.png",
+          "screenshot3": "http://www.vokal.io/sites/default/files/screenshot.png",
+          "screenshot4": "http://www.vokal.io/sites/default/files/screenshot.png",
           "added_at": "2015-06-01T19:22:24.850544Z",
           "updated": "2015-06-01T19:22:24.850544Z"
         },
@@ -263,7 +311,6 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 
 **Status Codes:**
 * `200` if successful
-* `401` if invalid credentials
 
 
 ### Get a project
@@ -277,17 +324,23 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 ```json
 {
     "id": 1,
-    "name": "Mira",
+    "id": 1,
+    "name": "Parche",
+    "headline": "Eliminating the valet wait",
+    "problem": "The traditional valet model doesn’t support the needs of the modern, cashless customer or offer an opportunity for reporting and analytics.",
+    "solution": "Parche partnered with Vokal for an uncommon logistical solution using a common tool, the smartphone, giving greater power and convenience to valet customers. The Parche app processes requests and payment with a single command, allowing customers to go from table to car without waiting outside or stopping for cash. Valet operators also gain the ability to monitor valet activity and eliminate the common causes of customer complaints, leaving better impressions and building repeat patronage.",
     "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
-    "description": "A fitness tracker for women",
+    "screenshot1": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot2": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot3": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot4": "http://www.vokal.io/sites/default/files/screenshot.png",
     "added_at": "2015-06-01T19:22:24.850544Z",
-    "updated": "2015-06-01T19:22:24.850544Z"  
+    "updated": "2015-06-01T19:22:24.850544Z"
 }
 ```
 
 **Status Codes:**
 * `200` if successful
-* `401` if invalid credentials
 * `404` if project does not exist
 
 
@@ -309,9 +362,16 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 ```json
 {
     "id": 1,
-    "name": "Mira",
+    "id": 1,
+    "name": "Parche",
+    "headline": "Eliminating the valet wait",
+    "problem": "The traditional valet model doesn’t support the needs of the modern, cashless customer or offer an opportunity for reporting and analytics.",
+    "solution": "Parche partnered with Vokal for an uncommon logistical solution using a common tool, the smartphone, giving greater power and convenience to valet customers. The Parche app processes requests and payment with a single command, allowing customers to go from table to car without waiting outside or stopping for cash. Valet operators also gain the ability to monitor valet activity and eliminate the common causes of customer complaints, leaving better impressions and building repeat patronage.",
     "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
-    "description": "A fitness tracker for women",
+    "screenshot1": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot2": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot3": "http://www.vokal.io/sites/default/files/screenshot.png",
+    "screenshot4": "http://www.vokal.io/sites/default/files/screenshot.png",
     "added_at": "2015-06-01T19:22:24.850544Z",
     "updated": "2015-06-01T19:22:24.850544Z"
 }
@@ -320,7 +380,7 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 **Status Codes:**
 * `200` if successful
 * `400` if data is not provided
-* `401` if invalid credentials
+* `401` if not admin
 * `404` if project does not exist
 
 
@@ -335,7 +395,7 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 
 **Status Codes:**
 * `204` if successful
-* `401` if invalid credentials
+* `401` if not admin
 * `404` if project does not exist
 
 
@@ -350,7 +410,6 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 ```json
 {
     "beacon_id": "1234567890",
-    "name": "Paul George Beacon",
     "employee": 1
 }
 ```
@@ -360,7 +419,6 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
 {
     "id": 1,
     "beacon_id": "1234567890",
-    "name": "Paul George Beacon",
     "employee": {
         "id": 1,
         "first_name": "Paul",
@@ -378,45 +436,36 @@ Vokal employees will each have a keychain beacon. During the tour the iPad will 
         "project": 1,
         "added_at": "2015-06-01T19:22:24.850544Z",
         "updated": "2015-06-01T19:22:24.850544Z"
-    }
+    },
+    "added_at": "2015-06-01T19:22:24.850544Z",
+    "updated": "2015-06-01T19:22:24.850544Z"
 }
 ```
 
 **Status Codes:**
 * `201` if successful
 * `400` if incorrect data provided
-* `401` if invalid credentials
+* `401` if not admin
 * `409` if beacon already exists  
 
 
-### Get a list of beacons
+### Get the list of beacons
 
 **GET:**
 ```
 /v1/beacon
 ```
 
-**Notes**
-One needs to send detected beacon ids as parameters
-Just hitting the route /v1/beacon will not have a response
-
-**Query Parameters:**
-Beacon records are returned in the order given
-(/v1/beacon?id=1&id=2&id=3&id=4)
-
-* `id` - An integer: the beacon's id
-
 **Response:**
 ```json
 {
-    "count": 4,
+    "count": 10,
     "previous": null,
     "next": "",
     "results": [
         {
             "id": 1,
             "beacon_id": "1234567890",
-            "name": "Paul George Beacon",
             "employee": {
               "id": 1,
               "first_name": "Paul",
@@ -434,7 +483,9 @@ Beacon records are returned in the order given
               "project": 1,
               "added_at": "2015-06-01T19:22:24.850544Z",
               "updated": "2015-06-01T19:22:24.850544Z"
-          }
+          },
+          "added_at": "2015-06-01T19:22:24.850544Z",
+          "updated": "2015-06-01T19:22:24.850544Z"
         },
     ]
 }
@@ -442,9 +493,62 @@ Beacon records are returned in the order given
 
 **Status Codes:**
 * `200` if successful
-* `400` if no parameters were given
-* `401` if invalid credentials
 
+
+### Get nearby beacons
+
+**GET:**
+```
+/v1/beacon/nearby
+```
+
+**Notes**
+One needs to send detected beacon ids as parameters
+Just hitting the route /v1/beacon/nearby will not return anything
+
+**Query Parameters:**
+Beacon records are returned in the order given
+(/v1/beacon/nearby?beacon_id=1234567890&beacon_id=999999999)
+
+* `id` - An integer: the beacon's id
+
+**Response:**
+```json
+{
+    "count": 2,
+    "previous": null,
+    "next": "",
+    "results": [
+        {
+            "id": 1,
+            "beacon_id": "1234567890",
+            "employee": {
+              "id": 1,
+              "first_name": "Paul",
+              "last_name": "George",
+              "title": "CEO",
+              "email": "paul.george@vokal.io",
+              "image_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
+              "summary": "He was selected by the Pacers with the 10th overall pick of the 2010 NBA draft. In 2013, he was selected to play in his first NBA All-Star Game, received the NBA Most Improved Player Award, and was named to the All-NBA Third Team and the All-Defensive Second Team",
+              "extra_info": {
+                  "What drives you?": "basketball",
+                  "Who inspires you? ": "basketball",
+                  "What’s something surprising about you?": "basketball",
+                  "What would you do if you won the lottery?": "basketball"
+              },
+              "project": 1,
+              "added_at": "2015-06-01T19:22:24.850544Z",
+              "updated": "2015-06-01T19:22:24.850544Z"
+          },
+          "added_at": "2015-06-01T19:22:24.850544Z",
+          "updated": "2015-06-01T19:22:24.850544Z"
+        },
+    ]
+}
+```
+
+**Status Codes:**
+* `200` if successful
 
 ### Get a beacon
 
@@ -456,16 +560,33 @@ Beacon records are returned in the order given
 **Response:**
 ```json
 {
-  "id": 1,
-  "beacon_id": "1234567890",
-  "name": "Paul George Beacon",
-  "employee": 1
+    "id": 1,
+    "beacon_id": "1234567890",
+    "employee": {
+        "id": 1,
+        "first_name": "Paul",
+        "last_name": "George",
+        "title": "CEO",
+        "email": "paul.george@vokal.io",
+        "image_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
+        "summary": "He was selected by the Pacers with the 10th overall pick of the 2010 NBA draft. In 2013, he was selected to play in his first NBA All-Star Game, received the NBA Most Improved Player Award, and was named to the All-NBA Third Team and the All-Defensive Second Team",
+        "extra_info": {
+            "What drives you?": "basketball",
+            "Who inspires you? ": "basketball",
+            "What’s something surprising about you?": "basketball",
+            "What would you do if you won the lottery?": "basketball"
+        },
+        "project": 1,
+        "added_at": "2015-06-01T19:22:24.850544Z",
+        "updated": "2015-06-01T19:22:24.850544Z"
+    },
+    "added_at": "2015-06-01T19:22:24.850544Z",
+    "updated": "2015-06-01T19:22:24.850544Z"
 }
 ```
 
 **Status Codes:**
 * `200` if successful
-* `401` if invalid credentials
 * `404` if beacon does not exist
 
 
@@ -479,24 +600,42 @@ Beacon records are returned in the order given
 **Body:**
 ```json
 {
-    "name": "Not yo beacon!"
+    "beacon_id": "9999999999"
 }
 ```
 
 **Response:**
 ```json
 {
-  "id": 1,
-  "beacon_id": "1234567890",
-  "name": "Not yo beacon!",
-  "employee": 1
+    "id": 1,
+    "beacon_id": "9999999999",
+    "employee": {
+        "id": 1,
+        "first_name": "Paul",
+        "last_name": "George",
+        "title": "CEO",
+        "email": "paul.george@vokal.io",
+        "image_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
+        "summary": "He was selected by the Pacers with the 10th overall pick of the 2010 NBA draft. In 2013, he was selected to play in his first NBA All-Star Game, received the NBA Most Improved Player Award, and was named to the All-NBA Third Team and the All-Defensive Second Team",
+        "extra_info": {
+            "What drives you?": "basketball",
+            "Who inspires you? ": "basketball",
+            "What’s something surprising about you?": "basketball",
+            "What would you do if you won the lottery?": "basketball"
+        },
+        "project": 1,
+        "added_at": "2015-06-01T19:22:24.850544Z",
+        "updated": "2015-06-01T19:22:24.850544Z"
+    },
+    "added_at": "2015-06-01T19:22:24.850544Z",
+    "updated": "2015-06-01T19:22:24.850544Z"
 }
 ```
 
 **Status Codes:**
 * `200` if successful
 * `400` if data is not provided
-* `401` if invalid credentials
+* `401` if not admin
 * `404` if beacon does not exist
 
 
@@ -511,5 +650,5 @@ Beacon records are returned in the order given
 
 **Status Codes:**
 * `204` if successful
-* `401` if invalid credentials
+* `401` if not admin
 * `404` if beacon does not exist
