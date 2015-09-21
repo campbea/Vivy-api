@@ -1,7 +1,15 @@
 Vivy API
 ====================
 
-Vivy is a Vokal iPad application that provides an engaging digital experience to visiting clients by showcasing nearby employees along with past/current projects.
+#### Goal
+Allow visitors to connect with Vokal on a personal level, while establishing ourselves as a professional, experienced tech company.
+#### Solution
+Vivy is an iPad application that provides an engaging digital experience to visitors by showcasing nearby Vokal employees along with past/current Vokal projects.
+#### How it works
+The client will be handed an ipad with the app open upon entering Vokal.
+The client can view Vokal’s past/current projects at any time.
+Vokal employees will each have a keychain beacon. During the tour the iPad will show all nearby Vokal employees and the current project they are associated with. They can then tap the individual to view more information.
+
 
 ## API Routes
 
@@ -205,7 +213,6 @@ Vivy is a Vokal iPad application that provides an engaging digital experience to
     "name": "Mira",
     "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
     "description": "A fitness tracker for women",
-    "video": "<iframe width='560' height='315' src='https://www.youtube.com/embed/eiWIOKKuyGE' frameborder='0' allowfullscreen></iframe>"
 }
 ```
 
@@ -216,7 +223,6 @@ Vivy is a Vokal iPad application that provides an engaging digital experience to
     "name": "Mira",
     "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
     "description": "A fitness tracker for women",
-    "video": "<iframe width='560' height='315' src='https://www.youtube.com/embed/eiWIOKKuyGE' frameborder='0' allowfullscreen></iframe>",
     "added_at": "2015-06-01T19:22:24.850544Z",
     "updated": "2015-06-01T19:22:24.850544Z"
 }
@@ -248,7 +254,6 @@ Vivy is a Vokal iPad application that provides an engaging digital experience to
           "name": "Mira",
           "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
           "description": "A fitness tracker for women",
-          "video": "<iframe width='560' height='315' src='https://www.youtube.com/embed/eiWIOKKuyGE' frameborder='0' allowfullscreen></iframe>",
           "added_at": "2015-06-01T19:22:24.850544Z",
           "updated": "2015-06-01T19:22:24.850544Z"
         },
@@ -275,7 +280,6 @@ Vivy is a Vokal iPad application that provides an engaging digital experience to
     "name": "Mira",
     "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
     "description": "A fitness tracker for women",
-    "video": "<iframe width='560' height='315' src='https://www.youtube.com/embed/eiWIOKKuyGE' frameborder='0' allowfullscreen></iframe>",
     "added_at": "2015-06-01T19:22:24.850544Z",
     "updated": "2015-06-01T19:22:24.850544Z"  
 }
@@ -308,7 +312,6 @@ Vivy is a Vokal iPad application that provides an engaging digital experience to
     "name": "Mira",
     "logo_url": "http://www.vokal.io/sites/default/files/sweet-pic.png",
     "description": "A fitness tracker for women",
-    "video": "<iframe width='560' height='315' src='https://www.youtube.com/embed/eiWIOKKuyGE' frameborder='0' allowfullscreen></iframe>",
     "added_at": "2015-06-01T19:22:24.850544Z",
     "updated": "2015-06-01T19:22:24.850544Z"
 }
