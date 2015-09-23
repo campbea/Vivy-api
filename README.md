@@ -9,7 +9,7 @@ different locations around the office (using beacon technology).
 #### How it works
 The client will be handed an ipad with the app open upon entering Vokal.
 The client can view Vokal’s employees or past/current projects at any time.
-The app will detect beacons as the visitor explores the office and display
+The app will detect beacons as the visitor explores the office, and display
 messages, pictures, information accordingly.
 
 #### API Table of Contents
