@@ -17,7 +17,6 @@ class ListCreateBeacon(generics.ListCreateAPIView):
 
 class RetrieveUpdateDestroyBeacon(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (AllowAny,)
-    # queryset = Beacon.objects.all()
     serializer_class = BeaconSerializer
     lookup_field = 'beacon_uuid'
 
