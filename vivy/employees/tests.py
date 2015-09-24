@@ -7,7 +7,7 @@ from rest_framework.test import APITestCase
 class EmployeeTestMixin(object):
 
     def setUp(self):
-        self.list_create_url = reverse('list_create_employee')
+        self.list_create_url = reverse('employee_list_create')
         self.retrieve_update_destroy_url = lambda pk: reverse(
                     'retrieve_update_destroy_employee', args=[pk])
 
@@ -48,7 +48,7 @@ class EmployeeTests(EmployeeTestMixin, APITestCase):
         url = self.list_create_url
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data), 5)
+        self.assertEqual(response.data['count'], 5)
 
     def test_get_an_employee(self):
         url = self.retrieve_update_destroy_url(pk=1)
@@ -64,6 +64,11 @@ class EmployeeTests(EmployeeTestMixin, APITestCase):
         self.assertEqual(response.data['first_name'], 'MAJORLAZER')
 
     def test_delete_an_employee(self):
-        url = self.retrieve_update_destroy_url(pk=1)
+        url = self.list_create_url
+        response = self.client.post(url, data=self.data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        employee_pk = response.data['id']
+
+        url = self.retrieve_update_destroy_url(pk=employee_pk)
         response = self.client.delete(url)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
