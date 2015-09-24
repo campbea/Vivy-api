@@ -29,6 +29,12 @@ class TestLocationCRUD(APITestCase):
                                  image_url='http://www.vokal.io/sites/default/files/nice-pic.png')
         self.location.save()
 
+        self.new_location = Location(title='Bunker',
+                                     summary='This is another summary',
+                                     impact='We do not dobusiness here',
+                                     image_url='http://www.vokal.io/sites/default/files/pic.png')
+        self.new_location.save()
+
         self.url_location_list = reverse('location_list_create')
         self.url_location_detail = reverse('retrieve_update_destroy_location',
                                            kwargs={'pk': self.location.id})
@@ -43,8 +49,9 @@ class TestLocationCRUD(APITestCase):
 
     def test_location_list(self):
         response = self.client.get(self.url_location_list, {})
+        print()
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(len(response.data['results']), 1)
+        self.assertEqual(len(response.data['results']), 2)
         self.assertEqual(response.data['results'][0]['title'], self.location.title)
 
     def test_location_put(self):
