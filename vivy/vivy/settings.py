@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'beacons',
-    'locations'
+    'locations',
     'django.contrib.postgres',
     'rest_framework',
     'employees',
