@@ -269,12 +269,12 @@ the image with the key "one" should be displayed before "two" and so on.
     "solution": "blah blah blah.",
     "technology": "blah blah blah.",
     "staff": [1, 2, 3, 4, 5, 6, 7],
-    "screenshot" : {
-      "one": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "two": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "three": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "four": "http://www.vokal.io/sites/default/files/screenshot.png"
-    }
+    "screenshot" : [
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+    ]
 }
 ```
 
@@ -289,12 +289,12 @@ the image with the key "one" should be displayed before "two" and so on.
     "solution": "blah blah blah.",
     "technology": "blah blah blah.",
     "staff": [1, 2, 3, 4, 5, 6, 7],
-    "screenshot" : {
-      "one": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "two": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "three": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "four": "http://www.vokal.io/sites/default/files/screenshot.png"
-    },
+    "screenshot" : [
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+    ],
     "added_at": "2015-06-01T19:22:24.850544Z",
     "updated": "2015-06-01T19:22:24.850544Z"
 }
@@ -330,12 +330,12 @@ the image with the key "one" should be displayed before "two" and so on.
             "solution": "blah blah blah.",
             "technology": "blah blah blah.",
             "staff": [1, 2, 3, 4, 5, 6, 7],
-            "screenshot" : {
-              "one": "http://www.vokal.io/sites/default/files/screenshot.png",
-              "two": "http://www.vokal.io/sites/default/files/screenshot.png",
-              "three": "http://www.vokal.io/sites/default/files/screenshot.png",
-              "four": "http://www.vokal.io/sites/default/files/screenshot.png"
-            },
+            "screenshot" : [
+                "http://www.vokal.io/sites/default/files/screenshot.png",
+                "http://www.vokal.io/sites/default/files/screenshot.png",
+                "http://www.vokal.io/sites/default/files/screenshot.png",
+                "http://www.vokal.io/sites/default/files/screenshot.png",
+            ],
             "added_at": "2015-06-01T19:22:24.850544Z",
             "updated": "2015-06-01T19:22:24.850544Z"
         },
@@ -365,12 +365,12 @@ the image with the key "one" should be displayed before "two" and so on.
     "solution": "blah blah blah.",
     "technology": "blah blah blah.",
     "staff": [1, 2, 3, 4, 5, 6, 7],
-    "screenshot" : {
-      "one": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "two": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "three": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "four": "http://www.vokal.io/sites/default/files/screenshot.png"
-    },
+    "screenshot" : [
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+    ],
     "added_at": "2015-06-01T19:22:24.850544Z",
     "updated": "2015-06-01T19:22:24.850544Z"
 }
@@ -406,12 +406,12 @@ the image with the key "one" should be displayed before "two" and so on.
     "solution": "blah blah blah.",
     "technology": "blah blah blah.",
     "staff": [1, 2, 3, 4, 5, 6, 7],
-    "screenshot" : {
-      "one": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "two": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "three": "http://www.vokal.io/sites/default/files/screenshot.png",
-      "four": "http://www.vokal.io/sites/default/files/screenshot.png"
-    },
+    "screenshot" : [
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+        "http://www.vokal.io/sites/default/files/screenshot.png",
+    ],
     "added_at": "2015-06-01T19:22:24.850544Z",
     "updated": "2015-06-01T19:22:24.850544Z"
 }
