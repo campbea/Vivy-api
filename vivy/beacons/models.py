@@ -7,7 +7,7 @@ from locations.models import Location
 
 class Beacon(models.Model):
 
-    beacon_id = models.CharField(max_length=32, unique=True)
+    beacon_uuid = models.CharField(max_length=32, unique=True)
     location = models.OneToOneField(Location)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
