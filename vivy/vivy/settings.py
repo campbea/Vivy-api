@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.postgres',
     'rest_framework',
     'employees',
+    'projects',
 )
 
 MIDDLEWARE_CLASSES = (
