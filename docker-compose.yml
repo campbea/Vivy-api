@@ -1,11 +1,9 @@
 db:
-  restart: always
   image: postgres:latest
   ports:
     - "5432:5432"
 
 web:
-  restart: always
   build: .
   command: python manage.py runserver 0.0.0.0:8000
   ports:

@@ -5,11 +5,6 @@ from .models import Location
 
 class LocationPostSerializer(serializers.ModelSerializer):
 
-    # title = serializers.CharField(max_length=128)
-    # summary = serializers.CharField()
-    # impact = serializers.CharField()
-    # image_url = serializers.URLField(max_length=256)
-
     class Meta:
         model = Location
         fields = ('id', 'title', 'summary', 'impact', 'image_url')
@@ -31,4 +26,4 @@ class LocationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Location
-        fields = ('id', 'title', 'summary', 'impact', 'image_url', 'added_at', 'updated')
+        fields = ('id', 'title', 'summary', 'impact', 'image_url', 'created_at', 'updated_at')
