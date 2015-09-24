@@ -17,5 +17,4 @@ urlpatterns = patterns(
     url(r'^v1/location/$', ListCreateLocation.as_view(), name='location_list_create'),
     url(r'^v1/location/(?P<pk>\d+)/$', RetrieveUpdateDestroyLocation.as_view(),
         name='retrieve_update_destroy_location'),
-
 )
