@@ -2,8 +2,6 @@ from rest_framework import serializers
 
 from .models import Beacon
 
-from locations.serializers import LocationSerializer
-
 
 class BeaconPostSerializer(serializers.ModelSerializer):
 
@@ -15,7 +13,6 @@ class BeaconPostSerializer(serializers.ModelSerializer):
 class BeaconSerializer(serializers.ModelSerializer):
 
     beacon_uuid = serializers.CharField(min_length=32, max_length=32)
-    # location = serializers.PrimaryKeyRelatedField(read_only=True)
 
     class Meta:
         model = Beacon
