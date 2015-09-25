@@ -18,7 +18,6 @@ class AllowGetOnly(BasePermission):
 
 class ListCreateProject(generics.ListCreateAPIView):
 
-    model = Project
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
     permission_classes = (AllowAny, )
@@ -26,7 +25,6 @@ class ListCreateProject(generics.ListCreateAPIView):
 
 class RetrieveUpdateDestroyProject(generics.RetrieveUpdateDestroyAPIView):
 
-    model = Project
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
     permission_classes = (AllowAny, )

@@ -10,7 +10,7 @@ class EmployeeTestMixin(object):
     def setUp(self):
         self.list_create_url = reverse('employee_list_create')
         self.retrieve_update_destroy_url = lambda pk: reverse(
-                    'retrieve_update_destroy_employee', args=[pk])
+            'retrieve_update_destroy_employee', args=[pk])
 
         self.data = {
             "first_name": "Loco",
