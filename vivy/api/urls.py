@@ -7,8 +7,8 @@ from .beacons_api import ListCreateBeacon, RetrieveUpdateDestroyBeacon
 
 urlpatterns = patterns('',
     # Project Routes
-    url(r'project/?$', ListCreateProject.as_view(), name='project_list_create'),
-    url(r'project/(?P<pk>\d+)/?$', RetrieveUpdateDestroyProject.as_view(),
+    url(r'^project/?$', ListCreateProject.as_view(), name='project_list_create'),
+    url(r'^project/(?P<pk>\d+)/?$', RetrieveUpdateDestroyProject.as_view(),
         name='retrieve_update_destroy_project'),
     # Employee routes
     url(r'^employee/?$', ListCreateEmployee.as_view(), name='employee_list_create'),
