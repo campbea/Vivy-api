@@ -30,6 +30,16 @@ class TestBeaconCRUD(TestLocationCRUD):
         response = self.client.post(self.url_beacon_list, self.beacon_data)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
+    def test_beacon_creation_400(self):
+        response = self.client.post(self.url_beacon_list,
+                                    {'beacon_uuid': '12fs',
+                                     'location': self.new_location.id})
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        response = self.client.post(self.url_beacon_list,
+                                    {'beacon_uuid': self.beacon_data['beacon_uuid'],
+                                     'location': 100})
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
     def test_beacon_get_list(self):
         response = self.client.get(self.url_beacon_list, {})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
