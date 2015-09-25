@@ -22,4 +22,6 @@ urlpatterns = patterns(
     url(r'^beacons/?$', ListCreateBeacon.as_view(), name='beacon_list_create'),
     url(r'^beacons/(?P<beacon_uuid>[A-Z0-9]{32})/?$', RetrieveUpdateDestroyBeacon.as_view(),
         name='retreive_update_destroy_beacon'),
+    # Update Employees
+    # url(r'^update-employees/?$', UpdateEmployees.as_view(), name='beacon_list_create'),
 )
