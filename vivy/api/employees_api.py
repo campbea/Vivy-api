@@ -18,7 +18,6 @@ class AllowGetOnly(BasePermission):
 
 class ListCreateEmployee(generics.ListCreateAPIView):
 
-    model = Employee
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
     permission_classes = (AllowAny, )
@@ -26,7 +25,6 @@ class ListCreateEmployee(generics.ListCreateAPIView):
 
 class RetrieveUpdateDestroyEmployee(generics.RetrieveUpdateDestroyAPIView):
 
-    model = Employee
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
     permission_classes = (AllowAny, )
