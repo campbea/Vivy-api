@@ -15,7 +15,7 @@ class Employee(models.Model):
     class Meta:
         verbose_name = "Employee"
         verbose_name_plural = "Employees"
-        ordering = ['last_name']
+        ordering = ['id']
         unique_together = ('first_name', 'last_name')
 
     def __str__(self):
