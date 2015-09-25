@@ -3,7 +3,6 @@ from django.core.urlresolvers import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-# from .utils import scrape_employee_page
 
 class EmployeeTestMixin(object):
 
@@ -73,6 +72,3 @@ class EmployeeTests(EmployeeTestMixin, APITestCase):
         url = self.retrieve_update_destroy_url(pk=employee_pk)
         response = self.client.delete(url)
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
-
-    # def test_scrape_page(self):
-    #     scrape_employee_page('https://www.vokal.io/team')

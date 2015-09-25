@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 
-from .employees_api import ListCreateEmployee, RetrieveUpdateDestroyEmployee
+from .employees_api import ListCreateEmployee, RetrieveUpdateDestroyEmployee, UpdateEmployees
 from .projects_api import ListCreateProject, RetrieveUpdateDestroyProject
 from .locations_api import ListCreateLocation, RetrieveUpdateDestroyLocation
 from .beacons_api import ListCreateBeacon, RetrieveUpdateDestroyBeacon
@@ -22,4 +22,6 @@ urlpatterns = patterns('',
     url(r'^beacons/?$', ListCreateBeacon.as_view(), name='beacon_list_create'),
     url(r'^beacons/(?P<beacon_uuid>[A-Z0-9]{32})/?$', RetrieveUpdateDestroyBeacon.as_view(),
         name='retreive_update_destroy_beacon'),
+    # Update Employee Data scrape_employee_page('https://www.vokal.io/team')
+    url(r'^update-employees/?$', UpdateEmployees.as_view(), name='update_employees'),
 )
