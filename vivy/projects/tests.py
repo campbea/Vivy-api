@@ -21,6 +21,6 @@ class ProjectTests(ProjectTestMixin, APITestCase):
         url2 = self.retrieve_update_destroy_url(pk=1)
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data['count'], 3)
+        self.assertEqual(response.data['count'], 4)
         response = self.client.get(url2)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
