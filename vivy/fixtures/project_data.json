@@ -7,7 +7,7 @@
                "opportunity": "The long history of Grainger also meant that the company wasn't born with technology in their genes. Grainger lacked the technical expertise and savviness to create a low technical debt, smooth UX e-commerce platform.",
                "solution": "Vokal sends a team of mobile developers for both iOS and Android to allow Grainger customers to purchase their products through a variety of platforms.",
                "technology": "iOS & Android",
-               "staff": [1, 2, 3, 4],
+               "staff": [1],
                "screenshot" : [],
                "added_at": "2015-06-01T19:22:24.850544Z",
                "updated": "2015-06-01T19:22:24.850544Z"}
@@ -20,7 +20,7 @@
                "logo_url": "http://splash.suntimes.com/wp-content/uploads/2015/02/parche-featured1.jpg",
                "solution": "Parche partnered with Vokal to give greater convenience to valet customers. The Parche app processes requests and payment with a single command, allowing customers to go from table to car without waiting outside or stopping for cash.",
                "technology": "iOS & Android",
-               "staff": [5, 6, 7, 8],
+               "staff": [2, 3],
                "screenshot": [],
                "added_at":"2015-09-24T18:03:10.693547Z",
                "updated":"2015-09-24T18:03:10.693547Z"}
@@ -33,7 +33,7 @@
                 "logo_url": "http://media.bizj.us/view/img/4076651/vocus-cision-01-cx*1200xx2771-1559-0-167.jpg",
                 "solution": "Cision partnered with Vokal to make their software native to iOS mobile devices, resulting in their trusted service turned into a feature-enhanced iOS app. PR professionals can now monitor media mentions, both planned and organic, while building media lists and analyzing trends on-the-go.",
                 "technology": "iOS & Android",
-                "staff": [9, 10, 11, 12],
+                "staff": [4],
                 "screenshot": [],
                 "added_at":"2015-09-24T18:03:10.693547Z",
                 "updated":"2015-09-24T18:03:10.693547Z"}
@@ -46,7 +46,7 @@
                 "logo_url": "http://d12qzwhsc3uslj.cloudfront.net/getasset/75690d22-fc7e-4227-b95c-d2584489f81a/",
                 "solution": "Vokal developed a frontend platform for rapid responsive design and layout application across Crain's many sites and email newsletters. Crain can now serve the content their readers trust on whichever device their readers prefer.",
                 "technology": "iOS & Android",
-                "staff": [13, 14, 15, 16],
+                "staff": [5],
                 "screenshot": [],
                 "added_at":"2015-09-24T18:03:10.693547Z",
                 "updated":"2015-09-24T18:03:10.693547Z"}

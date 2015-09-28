@@ -16,6 +16,7 @@ class Employee(models.Model):
         verbose_name = "Employee"
         verbose_name_plural = "Employees"
         ordering = ['id']
+        unique_together=('first_name', 'last_name', 'title')
 
     def __str__(self):
         return '{0} {1}'.format(self.first_name, self.last_name)

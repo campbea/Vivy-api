@@ -28,6 +28,7 @@ DEBUG = os.getenv('DEBUG', False)
 
 ALLOWED_HOSTS = ["*"]
 
+FIXTURE_DIRS = (os.path.join(BASE_DIR, 'fixtures'),)
 
 # Application definition
 

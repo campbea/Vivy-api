@@ -41,6 +41,9 @@ class EmployeeTests(EmployeeTestMixin, APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertTrue(response.data['id'])
 
+        response = self.client.post(url, data=self.data, format='json')
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
     def test_list_employees(self):
         url = self.list_create_url
         response = self.client.get(url)
