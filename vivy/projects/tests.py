@@ -3,8 +3,6 @@ from django.core.urlresolvers import reverse
 from rest_framework.test import APITestCase
 from rest_framework import status
 
-from employees.models import Employee
-
 
 class ProjectTestMixin(object):
 
