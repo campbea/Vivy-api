@@ -15,6 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 
+from projects.views import ProjectDashboardView
+from employees.views import EmployeeDashboardView
+
+
 urlpatterns = [
     url(r'^v1/', include('api.urls')),
+    url(r'^dash/projects/?$', ProjectDashboardView.as_view(), name='project_dash'),
+    url(r'^dash/employees/?$', EmployeeDashboardView.as_view(), name='employee_dash'),
 ]

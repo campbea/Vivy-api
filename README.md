@@ -20,6 +20,7 @@ messages, pictures, information accordingly.
 1. [Get an employee](#get-an-employee)
 1. [Update an employee](#update-an-employee)
 1. [Delete an employee](#delete-an-employee)
+1. [Update the employee list from Vokal website](#update-the-employee-list-from-Vokal-website)
 1. [Add a project](#add-a-project)
 1. [Get a list of projects](#get-a-list-of-projects)
 1. [Get a project](#get-a-project)
@@ -245,6 +246,23 @@ messages, pictures, information accordingly.
 * `204` if successful
 * `401` if not admin
 * `404` if employee does not exist
+
+
+### Update the employee list from Vokal website
+
+**POST:**
+```
+/v1/update-employees
+```
+
+**Notes:**
+Post to this route with appropriate authentication headers to update the employee
+list with the list of employees on the Vokal website.  
+
+**Status Codes:**
+* `200` if successful
+* `400` website scraper failed
+* `401` if not admin
 
 
 ### Add a project

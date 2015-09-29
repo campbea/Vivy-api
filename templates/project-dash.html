@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block project-dash %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 main">
+      <h1 class="page-header">Projects</h1>
+
+      {% for project in projects %}
+          {% if forloop.first %}<div class="row placeholders">{% endif %}
+          <div class="col-sm-4 placeholder">
+              <img src="{{ project.logo_url }}" class="img-responsive" width="400px" height="400px" alt="Project Logo">
+              <h4>{{ project.name }}</h4>
+              <span class="text-muted">{{ project.headline }}</span>
+          </div>
+          {% if forloop.counter|divisibleby:3 %}</div><div class="row placeholders">{% endif %}
+          {% if forloop.last %}</div>{% endif %}
+      {% endfor %}
+
+      <h2 class="sub-header">Project details</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+              <th>Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1,001</td>
+              <td>Lorem</td>
+              <td>ipsum</td>
+              <td>dolor</td>
+              <td>sit</td>
+            </tr>
+            <tr>
+              <td>1,002</td>
+              <td>amet</td>
+              <td>consectetur</td>
+              <td>adipiscing</td>
+              <td>elit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

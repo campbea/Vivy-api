@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block employee-dash %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 main">
+
+      <h1 class="page-header">Employees</h1>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>First</th>
+              <th>Last</th>
+              <th>Title</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for employee in employees %}
+            <tr>
+              <td>{{ employee.id }}</td>
+              <td>{{ employee.first_name }}</td>
+              <td>{{ employee.last_name }}</td>
+              <td>{{ employee.title }}</td>
+              <td>(button)</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
